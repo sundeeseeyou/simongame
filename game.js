@@ -49,7 +49,7 @@ function checkAnswer(currentLevel){
         }
     } else {
         $("body").addClass("game-over");
-        $("h1").text("Game over! Press a key to restart!");
+        $("h1").text("Game over! Try again!");
 
         setTimeout(function(){
             $("body").removeClass("game-over");
