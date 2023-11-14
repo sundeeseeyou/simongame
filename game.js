@@ -55,8 +55,7 @@ function checkAnswer(currentLevel){
             $("body").removeClass("game-over");
         },200);
 
-        let gameOver = new Audio("./sounds/wrong.mp3");
-        gameOver.play();
+        playSound("wrong");
 
         $(document).keydown(function(){
             location.reload();
@@ -84,9 +83,7 @@ function nextOrder() {
     //when the function activated, and gamePattern got push based on chosenColor, blink the color
     $("#" + chosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
-    let soundButton = new Audio("./sounds/" + chosenColor + ".mp3");
-    soundButton.play();
-    checkAnswer();
+    playSound(chosenColor);
 
     //level adds up every time user click
 
